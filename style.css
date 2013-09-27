@@ -15,9 +15,11 @@
 	width:100%;
  }
 
- section {
+.section {
  	min-width:200px;
- }
+  transition: all 0.5s linear;  
+  opacity: 0;
+}
 .red {
 	background-color:tomato;
 }
@@ -58,6 +60,9 @@
 .section {
   font-size:100px;
   color:#fff;
+}
+.section pre {
+  font-size:20px;
 }
 .main-content,
 .main-sidebar,

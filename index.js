@@ -148,14 +148,22 @@ $('.section').on('click', function() {
 	app.rand = colors[Math.floor(Math.random() * colors.length)];
 });
 
+$(function() {
+$( ".section").draggable();
 
+});
 Q.when($.ajax({
-  url: "/promise/data.json",
-  dataType: 'json'
+  url: "http://exacta.apiary.io/user/register",
+  dataType: 'json',
+  method: 'POST'
 }))
 .then(function (data) {
-   console.log(data);
+  setTimeout(function() {
+  	$('.one pre').html(JSON.stringify(data));
+  	$('.one').css('opacity', 100);
+  }, 500);
+  $('.one').css('background-color', app.rand);
 })
 .then(function (data) {
     // data retrieved from url2
-})
+});
