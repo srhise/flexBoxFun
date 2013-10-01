@@ -11,14 +11,14 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	height:50%;
+  height:50%;
 	width:100%;
  }
 
 .section {
  	min-width:200px;
   transition: all 0.5s linear;  
-  opacity: 0;
+ 
 }
 .red {
 	background-color:tomato;
@@ -58,11 +58,12 @@
 }
 
 .section {
-  font-size:100px;
+  font-size:3rem;
   color:#fff;
 }
-.section pre {
-  font-size:20px;
+.section span {
+  font-size:1.5rem;
+  display: block;
 }
 .main-content,
 .main-sidebar,
@@ -78,6 +79,7 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  word-wrap:break-word;
 }
 
 h1, h2 {
@@ -89,4 +91,16 @@ h2 {
 }
 p {
   margin: 0 0 1em 0;
+}
+
+
+@media all and (max-width: 568px) {
+  .section {
+    flex-basis: 100%;
+  }
+  .row {
+      height:auto;
+  }
+
+  
 }
